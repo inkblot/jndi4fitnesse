@@ -24,11 +24,9 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * Created by IntelliJ IDEA.
@@ -97,6 +95,11 @@ public class UsingTheseDatabases {
         @Override
         public boolean isWrapperFor(Class<?> iface) throws SQLException {
             return false;
+        }
+
+        @Override
+        public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+            return null;
         }
     }
 }

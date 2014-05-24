@@ -2,7 +2,7 @@
 <ivy-module version="2.0"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
-    <info organisation="org.movealong" module="jndi4fitnesse" revision="0.0.3"/>
+    <info organisation="org.movealong" module="jndi4fitnesse" revision="1.0.0"/>
 
     <configurations>
         <conf name="default" extends="runtime" description="Distributed artifacts"/>
@@ -16,8 +16,9 @@
 
     <publications>
         <artifact name="jndi4fitnesse" type="jar" ext="jar" conf="default"/>
-        <artifact name="jndi4fitnesse-source" type="source" ext="jar" conf="sources"/>
-        <artifact name="jndi4fitnesse-src" ext="tar.gz" conf="build"/>
-        <artifact name="jndi4fitnesse-src" ext="zip" conf="build"/>
+        <artifact name="jndi4fitnesse" type="pom" ext="xml" conf="default"/>
+        <artifact name="jndi4fitnesse" type="source" ext="jar" conf="sources"/>
+        <artifact name="jndi4fitnesse" type="source" ext="tar.gz" conf="sources"/>
+        <artifact name="jndi4fitnesse" type="source" ext="zip" conf="sources"/>
     </publications>
 </ivy-module>
